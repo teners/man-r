@@ -2,6 +2,7 @@
 \usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}	%кодировка
 \usepackage[english,russian]{babel} %используем русский и английский языки с переносами
+\usepackage[colorlinks=true,urlcolor=black,linkcolor=black,filecolor=black,citecolor=black]{hyperref}
 \usepackage{lipsum}
 \usepackage{fancyhdr}
 %% set indent at the beginning of a paragraph
@@ -11,7 +12,6 @@
 \usepackage{enumitem}
 \usepackage{listings}
 %% set urls' colors 
-\usepackage[colorlinks=true,urlcolor=black,linkcolor=black,filecolor=black,citecolor=black]{hyperref}
 \usepackage{amsmath}
 
 \usepackage{geometry} % Меняем поля страницы
@@ -63,8 +63,7 @@
 \tableofcontents 
 \newpage
 
-\section{Введение}
-
+\input{1-introduction.tex}
 
 
 \end{document}
