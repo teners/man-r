@@ -2,7 +2,16 @@
 \usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}	%кодировка
 \usepackage[english,russian]{babel} %используем русский и английский языки с переносами
-
+\usepackage{lipsum}
+\usepackage{fancyhdr}
+%% set indent at the beginning of a paragraph
+\usepackage{indentfirst} 
+\usepackage[titletoc]{appendix}
+\usepackage{bookmark}
+\usepackage{enumitem}
+\usepackage{listings}
+%% set urls' colors 
+\usepackage[colorlinks=true,urlcolor=black,linkcolor=black,filecolor=black,citecolor=black]{hyperref}
 \usepackage{amsmath}
 
 \usepackage{geometry} % Меняем поля страницы
@@ -11,6 +20,10 @@
 \setlength{\parindent}{1cm}
 \setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
 
+%% macro starts new section on new page
+\newcommand{\psection}[1]{\newpage\section{#1}}
+%% this one does the same but for unenumerate sections
+\newcommand{\unsection}[1]{\newpage\section*{#1}\addcontentsline{toc}{section}{#1}}
 
 \begin{document}
 
