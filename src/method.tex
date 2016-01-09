@@ -24,6 +24,15 @@
 \newcommand{\psection}[1]{\newpage\section{#1}}
 %% this one does the same but for unenumerate sections
 \newcommand{\unsection}[1]{\newpage\section*{#1}\addcontentsline{toc}{section}{#1}}
+%% Make itemize more beutiful
+\renewenvironment{itemize}{
+	\begin{list}{\labelitemi}{
+		\setlength{\topsep}{0pt}
+		\setlength{\partopsep}{0pt}
+		\setlength{\parskip}{0pt}
+		\setlength{\itemsep}{0pt}
+		\setlength{\parsep}{0pt}
+	} } {\end{list}}
 
 \begin{document}
 
