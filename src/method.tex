@@ -24,6 +24,15 @@
 \newcommand{\psection}[1]{\newpage\section{#1}}
 %% this one does the same but for unenumerate sections
 \newcommand{\unsection}[1]{\newpage\section*{#1}\addcontentsline{toc}{section}{#1}}
+%% Make itemize more beutiful
+\renewenvironment{itemize}{
+	\begin{list}{\labelitemi}{
+		\setlength{\topsep}{0pt}
+		\setlength{\partopsep}{0pt}
+		\setlength{\parskip}{0pt}
+		\setlength{\itemsep}{0pt}
+		\setlength{\parsep}{0pt}
+	} } {\end{list}}
 
 \begin{document}
 
@@ -37,8 +46,7 @@
 		АЭРОКОСМИЧЕСКОГО ПРИБОРОСТРОЕНИЯ»  }
 
 		\vspace{2cm}
-		\sc{Авторы: Д.В. Дулин, С.А. Соколов}\\
-		{\footnotesize Под редакцией М.А. Нарбута и М.В. Фаттаховой}
+		\sc{Авторы: В.В Голубев, Д.В. Дулин, С.А. Соколов}\\
 	\end{center} 
 
 	\begin{center}
@@ -64,6 +72,12 @@
 \newpage
 
 \input{introduction.tex}
+\input{installation.tex}
 \input{basic-syntax.tex}
+\input{lab1.tex}
+\input{lab2.tex}
+\input{lab3.tex}
+\input{lab4.tex}
+\input{lab5.tex}
 
 \end{document}
