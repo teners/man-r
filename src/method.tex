@@ -16,8 +16,8 @@
 \usepackage[framemethod=TikZ]{mdframed}
 \mdfdefinestyle{BadassFrame}{
     linecolor=gray!50!white,
-    innertopmargin=\baselineskip,
-    innerbottommargin=\baselineskip,
+    innertopmargin=5pt,
+    innerbottommargin=5pt,
     innerrightmargin=10pt,
     innerleftmargin=10pt,
     backgroundcolor=gray!50!white}
@@ -32,7 +32,7 @@
 \newcommand{\psection}[1]{\newpage\section{#1}}
 %% this one does the same but for unenumerate sections
 \newcommand{\unsection}[1]{\newpage\section*{#1}\addcontentsline{toc}{section}{#1}}
-%% Make itemize more beutiful
+%% Make itemize more beautiful
 \renewenvironment{itemize}{
 	\begin{list}{\labelitemi}{
 		\setlength{\topsep}{0pt}
