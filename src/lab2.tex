@@ -10,12 +10,13 @@
           Для этого получите 100 случайных чисел от 0 до 1 с помощью функции \texttt{runif}.
           Затем, при помощи функции \texttt{qnorm}, которая первым аргументом принимает 
           набор [предварительно сгенерированных] вероятностей, необходимо получить искомую выборку.
-          Проделайте тоже самое для второй выборки (с другими значениями вероятностей, матожидания 
-          и среднего квадратического отклонения).
+          Вторую выборку сгенерируйте при помощи функции \texttt{rnorm} 
+          (с другими значениями вероятностей, матожидания и среднего квадратического отклонения).
 
           \begin{mdframed}[style=BadassFrame]
 
-              \texttt{runif(num, low, high)} \\-- генерирует \texttt{num} случайных чисел в заданном интервале $[low; high]$  
+              \texttt{runif(num, low, high)} 
+                -- генерирует \texttt{num} случайных чисел в заданном интервале $[low; high]$  
               \begin{description}
 
                 \item[num] -- количество чисел
@@ -45,16 +46,16 @@
 
           \begin{mdframed}[style=BadassFrame]
 
-              \texttt{cor(x, y = NULL, use = ``everything'', \\ method = c(``pearson'', ``kendall'', ``spearman'')} \\
+              \texttt{cor(x, y = NULL, use = ``everything'', \\ \phantom{    } method = c(``pearson'', ``kendall'', ``spearman'')} \\
                 -- вычисляет коэффициент корреляции двух наборов величин. 
               \begin{description}
 
                 \item[x] -- первый набор
                 \item[y] -- (необязательный) второй набор (аргумент по умолчанию эквивалентен y=x, но более эффективен )
-                \item[use] -- (необязательный) метод вычисления коэффициента ковариации в случае отсутствия некоторых значений.
-                    ``everything'' (по умолчанию), ``all.obs", ``complete.obs'', ``na.or.complete'', or ``pairwise.complete.obs''
-                \item[method] -- (необязательный) способ вычисления коэффициента ковариации. Должен быть один из: 
-                    ``pearson'' (по умолчанию), ``kendall'', ``spearman''
+                \item[use] -- метод вычисления коэффициента в случае отсутствия (NA) некоторых значений.
+                     \texttt{``everything''} (по умолчанию),  \texttt{``all.obs", ``complete.obs'', ``na.or.complete'', ``pairwise.complete.obs''}
+                \item[method] -- (необязательный) способ вычисления коэффициента корреляции. Должен быть один из: 
+                     \texttt{``pearson''} (по умолчанию), \texttt{``kendall'', ``spearman''}
               \end{description}
           \end{mdframed}
 
@@ -63,16 +64,16 @@
 
           \begin{mdframed}[style=BadassFrame]
 
-              \texttt{cov(x, y = NULL, use = ``everything'', \\ \indent method = c(``pearson'', ``kendall'', ``spearman''))} \\
+              \texttt{cov(x, y = NULL, use = ``everything'', \\ \phantom{    } method = c(``pearson'', ``kendall'', ``spearman''))} \\
                     -- вычисляет коэффициент ковариации двух наборов величин. 
               \begin{description}
 
                 \item[x] -- первый набор
                 \item[y] -- (необязательный) второй набор (аргумент по умолчанию эквивалентен y=x, но более эффективен )
-                \item[use] -- (необязательный) метод вычисления коэффициента ковариации в случае отсутствия некоторых значений.
-                    ``everything'' (по умолчанию), ``all.obs'', ``complete.obs'', ``na.or.complete'', or ``pairwise.complete.obs''
+                \item[use] -- метод вычисления коэффициента в случае отсутствия (NA) некоторых значений.
+                     \texttt{``everything''} (по умолчанию),  \texttt{``all.obs", ``complete.obs'', ``na.or.complete'', ``pairwise.complete.obs''}
                 \item[method] -- (необязательный) способ вычисления коэффициента ковариации. Должен быть один из: 
-                    ``pearson'' (по умолчанию), ``kendall'', ``spearman''
+                     \texttt{``pearson''} (по умолчанию), \texttt{``kendall'', ``spearman''}
               \end{description}
           \end{mdframed}
 
@@ -88,21 +89,7 @@
 
     \item Вычислите дисперсию $S_x^2$ и среднее квадратическое отклонение $S_x$ выборки с помощью 
           функций \texttt{var} и \texttt{sd} соответственно. Сравните полученные значения с ранее использованными 
-          $\sigma$ и $\sigma^2$.
-
-          \begin{mdframed}[style=BadassFrame]
-
-              \texttt{var(x, y = NULL, na.rm = FALSE, use)} \\ -- вычисляет дисперсию набора величин
-              \begin{description}
-
-                \item[x] -- первый набор
-                \item[y] -- (необязательный) второй набор (аргумент по умолчанию эквивалентен y=x, но более эффективен )
-                \item[na.rm] -- (необязательный) должны ли учитываться отсутствующие значения? (нет по умолчанию).
-                \item[use] -- (необязательный) метод вычисления коэффициента ковариации в случае отсутствия некоторых значений.
-                    ``everything'' (по умолчанию), ``all.obs", ``complete.obs'', ``na.or.complete'', or ``pairwise.complete.obs''
-              \end{description}
-          \end{mdframed}
-
+          $\sigma$ и $\sigma^2$. \\
           Достаточно использовать первый аргумент.
 
     \item Вычислите вероятность попадания случайной величины $X \in N(\mu, \sigma)$ в интервал $[5;11]$. Для нахождения значений функции распределения
@@ -147,15 +134,6 @@
             \item[--] Выборочное среднее квадратичное отклонение $S_x$ - при помощи функции \texttt{sd}
         \end{itemize}
 
-        \begin{mdframed}[style=BadassFrame]
-
-              \texttt{mean(x)} \\ -- находит матожидание набора значений \texttt{x}
-              \begin{description}
-
-                \item[x] -- набор значений
-              \end{description}
-        \end{mdframed}
-
     \item Вычислите ошибки оценки параметров. Ошибка оценки равна разности истинного значения параметра 
           и его оценки: 
           $$ e_\mu = \mu - \overline{x} $$ 
@@ -183,8 +161,9 @@
 
           \begin{mdframed}[style=BadassFrame]
 
-              \texttt{qt(p, df, ncp, lower.tail = TRUE, log.p = FALSE)} \\ -- возвращает значение ячейки таблицы
-                квантилей распределения Стьюдента для набора вероятностей и определенного числа степеней свободы
+              \texttt{qt(p, df, ncp, lower.tail = TRUE, log.p = FALSE)} \\ 
+                -- возвращает значение ячейки таблицы квантилей распределения Стьюдента для набора 
+                вероятностей и определенного числа степеней свободы
               \begin{description}
 
                 \item[p] -- набор вероятностей
