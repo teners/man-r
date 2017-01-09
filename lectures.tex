@@ -1263,6 +1263,38 @@
 		\item Правило введения квантора $\exists$:
 			$frac{G(x) \supset F}{\exists x G(x) \supset F}$
 	\end{enumerate}
+
+
+\subsection{Интерпретация формул исчисления предикатов}
+	Интерпретация формулы $F$ в исчислении предикатов определяется
+	сопоставлением:
+	\begin{enumerate}
+		\item Каждой предметной константе некоторого элемента из $M$;
+		\item Каждому n-местному функциональному символу отображения $f: M^n
+			\rightarrow M$;
+		\item Каждому m-местному предикатному символу $P: M^m \rightarrow B$.
+	\end{enumerate}
+
+
+\subsection{Эквивалентные преобразования в исчислении предикатов}
+	\textit{Определение.} Формулы называются эквивалентными, если при любых
+	интерпретациях они принимают одно значение.
+	\begin{enumerate}
+		\item $\overline{\exists x P(x)} = \forall x \overline{P(x)}$;
+		\item $\overline{\forall x P(x)} = \exists x \overline{P(x)}$;
+		\item Дистрибутивность операции $\forall$ относительно конъюнкции:\\
+			$$ \forall x(P_1(x) \& P_2(x)) = \forall x P_1(x) \& \forall x P_2(x)$$
+		\item Дистрибутивность операции $\exists$ относительно дизъюнкции:\\
+			$$\exists x(P_1(x) \vee P_2(x)) = \exists x P_1(x) \& \exists x P_2(x)$$
+		\item Односторонние:\\
+			$$\exists x(P_1(x) \vee P_2(x)) \Rightarrow \exists x P_1(x) \&
+			\exists x P_2(x)$$ \\
+			$$\forall x P_1(x) \vee i\forall P_2(x) \Rightarrow \forall x(P_1(x) \&
+			P_2(x)$$
+%TODO
+	\end{enumerate}
+
+
 \section{Метод резолюций и его использование в системах искусственного
 	интеллекта}
 
