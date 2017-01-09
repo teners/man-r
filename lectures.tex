@@ -895,7 +895,58 @@
 		\item[---] если $ A $ и $ B $~--- правильно построенные формулы, то такими
 			формулами являются так же и $ A~\vee B, A~\& B, \neg B, \dots $;
 	\end{itemize}
-
+	$ S $:
+	\begin{itemize}
+		\item[$ S_{I}: $]
+			\begin{enumerate}
+				\item $ A \supset (B \supset C) $;
+				\item $ (A \supset B) \supset ((A \supset (B \supset C)) \supset (A
+					\supset C)) $;
+				\item $ (A \& B) \supset A $;
+				\item $ (A \& B) \supset B $;
+				\item $ A \supset (B \supset (A \& B)) $;
+				\item $ A \supset (A \vee B) $;
+				\item $ B \supset (A \vee B) $;
+				\item $ (A \supset C) \supset ((B \supset C) \supset ((A \vee B)
+					\supset C)) $;
+				\item $ (A \supset B) \supset ((A \supset \neg B) \supset \neg A) $;
+				\item $ \neg \neg A \supset A $.
+			\end{enumerate}
+		\item[$ S_{II}:  $]
+			\begin{enumerate}
+				\item $ A \supset (B \supset A) $;
+				\item $ (A \supset (B \supset C)) \supset ((A \supset B) \supset (A
+					\supset C)) $;
+				\item $ (\neg A \supset \neg B) \supset ((\neg A \supset B) \supset A)
+					$;
+				\item $ A \vee B = \neg A \supset B $;
+				\item $ A \& B = \neg(A \supset \neg B) $.
+			\end{enumerate}
+	\end{itemize}
+	Системы аксиом $S_{I}$ и $S_{II}$ равнозначны (т.~е. порождают одно и то же
+	множество правильно построенных формул). Выбор той или иной системы
+	определяется конкретными задачами. Для $S_{I}$ выводы будут короче, но она
+	более богатая; $S_{I}$~--- более обозримая, более компактная.
+	$ R $:
+	\begin{enumerate}
+		\item Правило подстановки: если $ \textit{A} $~--- некоторая выводимая
+			формула $ \textit{A}(A) $, то выводима и форма, получающаяся из первой,
+			заменой всех вхождений $ \textit{A} $ на формулу $ \textit{B} $:
+			$ \textit{A}(\textit{B}) $. Обозначение:
+			$$ \frac{\textit{A}(A)}{\textit{A}(B)}, \textit{A}(A) \vdash
+			\textit{A}(A). $$
+		\item Modus Ponens~--- правило заключения. Если $ A $ и $ A \supset B $~---
+			выводимые формулы, то выводима и формула $ B $. Обозначение:
+			$$ \frac{A, A \supset B}{B}, A, A \supset B \vdash B. $$
+		\item Теорема дедукции: пусть некоторая $ \Gamma $~--- множество формул, $
+			A $, $ B $~--- тоже формулы, тогда если
+			$$ \Gamma, A \vdash B \implies \Gamma \vdash A \supset B,
+			\frac{A}{A \supset B}, $$
+			где $ B $~--- любая правильно построенная формула.
+	\end{enumerate}
+	Система аксиом $ S $ и правила $ R $ (вместе с $ U $ и $ L $) полностью
+	определяют множество всех правильно построенных формул исчисления
+	высказываний.
 
 \section{Метод резолюций и его использование в системах искусственного
 	интеллекта}
