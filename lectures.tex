@@ -997,6 +997,52 @@
 	\end{center}
 
 \subsection{Разложение логических функций по переменным}
+	$$
+	\begin{cases}
+		x^0 = \bar{x}, \\
+		x^1 = x, \\
+		\alpha \in 0, 1 = B_2. \\
+	\end{cases}
+	\Rightarrow
+	\begin{aligned}
+		x^{\alpha} = 1, & x = \alpha,\\
+		x^{\alpha} = 0, & x \neq \alpha.\\
+	\end{aligned}
+	$$
+
+	\textit{Теорема (о разложении функций по переменным):} всякая логическая
+	функция $ f(x_1, x_2, \dots, x_n) $ может быть представлена в виде
+	$$ \bigvee_{\langle \alpha_1, \alpha_2, \dots, \alpha_m \rangle \subseteq
+	B^m_2}
+	x^{\alpha_1}_1, x^{\alpha_2}_2, \dots, x^{\alpha_m}_m
+	f(\alpha_1, \alpha_2, \dots, \alpha_m, x_{m+1}, \dots, x_n),$$
+	где $ m \leq n $, и дизъюнкция берется по всем $ 2^m $ наборам $ \langle
+	\alpha_1, \alpha_2, \dots, \alpha_m \rangle $ значений переменных $ x_1, x_2,
+	\dots, x_n $.\\
+
+	\textit{Доказательство:} подставим в обе части равенства произвольный набор
+	$ \langle \sigma_1, \sigma_2, \dots, \sigma_n \rangle $. Т.~к.
+	$ x^{\alpha_i}_i = 1 $, то среди $ 2^m $ конъюнкций $ x^{\alpha_1}_1,
+	x^{\alpha_2}_2, \dots, x^{\alpha_m}_m $ в единицу обратится только одна,
+	причём та, в которой $ x^{\alpha_1}_1 = x^{\alpha_2}_2 = \dots =
+	x^{\alpha_m}_m = 1 $, т.~е. в которой $ x_1 = \alpha_1, x_2 = \alpha_2,
+	\dots, x_m = \alpha_m $. Это означает, что
+	$$ f(\sigma_1, \sigma_2, \dots, \sigma_n) =
+	\sigma_1^{\alpha_1} \sigma_2^{\alpha_2} \dots \sigma_m^{\alpha_m}
+	f(\sigma_1, \sigma_2, \dots, \sigma_m, x_{m+1}, \dots, x_n). $$
+
+	\textit{Следствие (СДНФ):} разложение
+	логической функции по всем переменным и формирование совершенной
+	дизъюнктивной нормальной формы
+	$$ f(x_1, x_2, \dots, x_n) = \bigvee_{f(\sigma_1, \sigma_2, \dots, \sigma_n)
+	= 1} x^{\sigma_1}_1, x^{\sigma_2}_2, \dots, x^{\sigma_n}_n $$
+
+	\textit{Следствие (СКНФ):} разложение
+	логической функции по всем переменным и формирование совершенной
+	конъюнктивной нормальной формы
+	$$ f(x_1, x_2, \dots, x_n) = \bigwedge_{f(\sigma_1, \sigma_2, \dots, \sigma_n)
+	= 0} x^{\sigma_1}_1, x^{\sigma_2}_2, \dots, x^{\sigma_n}_n $$
+
 
 
 \section{Метод резолюций и его использование в системах искусственного
