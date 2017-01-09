@@ -980,7 +980,7 @@
 	\\
 
 	\textbf{Логические функции одной переменной}
-	$$ n = 1; \phi_0(x) = 0, \phi_1(x) = x, \phi_2(x) = \bar{\phi_2},
+	$$ n = 1; \phi_0(x) = 0, \phi_1(x) = x, \phi_2(x) = \overline{\phi_2},
 	\phi_3(x) = 1 $$
 
 	\begin{center}
@@ -999,7 +999,7 @@
 \subsection{Разложение логических функций по переменным}
 	$$
 	\begin{cases}
-		x^0 = \bar{x}, \\
+		x^0 = \overline{x}, \\
 		x^1 = x, \\
 		\alpha \in 0, 1 = B_2. \\
 	\end{cases}
@@ -1042,6 +1042,55 @@
 	конъюнктивной нормальной формы
 	$$ f(x_1, x_2, \dots, x_n) = \bigwedge_{f(\sigma_1, \sigma_2, \dots, \sigma_n)
 	= 0} x^{\sigma_1}_1, x^{\sigma_2}_2, \dots, x^{\sigma_n}_n $$
+
+
+\subsection{Булева алгебра. Свойства булевой алгебры}
+	Определение булевой алгебры:
+	$$ A = (P_2; \vee, \&, \neg) $$
+
+	\begin{enumerate}
+		\item Ассоциативность относительно
+			\begin{itemize}
+				\item[---] конъюнкции: $ x_1 \& (x_2 \& x_3) = (x_1 \& x_2) \& x_3 $;
+				\item[---] дизъюнкиции: $ x_1 \vee (x_2 \vee x_3) = (x_1 \vee x_2)
+					\vee x_3 $;
+			\end{itemize}
+		\item Коммутативность относительно
+			\begin{itemize}
+				\item[---] конъюнкции: $ x_1 \& x_2 = x_2 \& x_1 $;
+				\item[---] дизъюнкиции: $ x_1 \vee x_2 = x_2 \vee x_1 $;
+			\end{itemize}
+		\item Дистрибутивность
+			\begin{itemize}
+				\item[---] конъюнкции относительно дизъюнкции: $ x_1 \& (x_2 \vee x_3)
+					= x_1 \& x_2 \vee x_1 \& x_3 $;
+				\item[---] дизъюнкции относительно конъюнкции: $ x_1 \vee (x_2 \& x_3)
+					= (x_1 \vee x_2) \& (x_1 \vee x_3) $;
+			\end{itemize}
+		\item Идемпотентность
+			\begin{itemize}
+				\item[---] $ x \& x = x $;
+				\item[---] $ x \vee x = x $;
+			\end{itemize}
+		\item $ \neg \neg x = x $;
+		\item Свойство констант
+			\begin{itemize}
+				\item[---] $ x \& 1 = x $;
+				\item[---] $ x \& 0 = 0 $;
+				\item[---] $ x \vee 1 = 1 $;
+				\item[---] $ x \vee 0 = x $;
+				\item[---] $ \neg 0 = 1 $;
+			\end{itemize}
+		\item Закон де Моргана
+			\begin{itemize}
+				\item[---] $ \overline{x_1 \& x_2} = \overline{x_1} \vee
+					\overline{x_2} $;
+				\item[---] $ \overline{x_1 \vee x_2} = \overline{x_1} \&
+					\overline{x_2} $;
+			\end{itemize}
+		\item Закон противоречия: $ x \& \neg x = 0 $;
+		\item Закон исключения третьего: $ x \vee \neg x = 1 $.
+	\end{enumerate}
 
 
 
