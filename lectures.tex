@@ -941,5 +941,23 @@
 	\end{itemize}
 
 
+\subsection{Сколемовские стандартные формы}
+
+	Процедура получения сколемовской стандартной формы или сколемизации
+	заключается в полученной ранее пренексной нормальной форме исключении
+	кванторов существования путем введения сколемовской функции.\par
+	Пример: $\exists x \forall y \forall z \exists u \forall V \exists \omega$\\
+	$P(x,y,z,u,V,\omega)$ --- матрица конъюнктивной нормальной формы.\par
+
+	\begin{enumerate}
+		\item $x \to \alpha \in m$
+		\item $u \to f(y,z)$
+		\item $\omega \to g(y,z,V)$
+	\end{enumerate}
+	$\Rightarrow \forall y \forall z \forall V P(\alpha,y,z,f(y,z),g(y,z,V)$
+
+
+
+
 
 \end{document}
