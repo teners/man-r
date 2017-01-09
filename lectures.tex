@@ -761,11 +761,11 @@
 
 \subsection{Формальная постановка задачи распознавания технического состояния}
 
-	$\Omega = {\omega}$ — счетное множество образов подлежащих распознаванию.\par
+	$\Omega = {\omega}$ --- счетное множество образов подлежащих распознаванию.\par
 	$\Omega' = {\omega} \subset \Omega, \quad |\Omega| < +\infty$ \par
-	$X = {\chi} = X_{\textup{и}} + X_{\textup{в}}$ — множество параметров
+	$X = {\chi} = X_{\textup{и}} + X_{\textup{в}}$ --- множество параметров
 	технического состояния.\par
-	$G = {G_i}$ — множество классов образов.\par
+	$G = {G_i}$ --- множество классов образов.\par
 
 	\begin{tikzpicture}
 		\node(Osht) at (0,3){$\Omega'$};
@@ -789,15 +789,15 @@
 		\draw[thick,->] (0.5,0) -- (2.5,0) node[pos=0.5, above]{$\zeta$};
 	\end{tikzpicture}
 
-	$\eta : \Omega' \to G$ — отношение обучения.\par
+	$\eta : \Omega' \to G$ --- отношение обучения.\par
 	$\begin{drcases}
 		\psi : \Omega \to X_{\textup{и}} \\
 		\psi' : \Omega' \to X_{\textup{и}}
-	\end{drcases}$ — отношения наблюдения.\par
-	$\Psi : X_{\textup{и}} \to X_{\textup{в}}$ — отношение вычислимости.\par
-	$\varsigma : X_{\textup{в}} \to G$ — отношение интерпретации.\par
-	$\xi : \Omega \to \Omega'$ — отношение обобщения.\par
-	$\zeta : \Omega \to G$ — отношение распознавания.\par
+	\end{drcases}$ --- отношения наблюдения.\par
+	$\Psi : X_{\textup{и}} \to X_{\textup{в}}$ --- отношение вычислимости.\par
+	$\varsigma : X_{\textup{в}} \to G$ --- отношение интерпретации.\par
+	$\xi : \Omega \to \Omega'$ --- отношение обобщения.\par
+	$\zeta : \Omega \to G$ --- отношение распознавания.\par
 	$\zeta : \varsigma * \Psi * \Psi' * \xi \to G$.\par
 	$\zeta : \varsigma * \Psi * \xi  \to G$.\par
 
